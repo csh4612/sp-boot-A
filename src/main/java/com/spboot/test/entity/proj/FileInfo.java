@@ -16,6 +16,7 @@ import lombok.Data;
 public class FileInfo {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "fi_num")
 	private Integer fiNum;
 	

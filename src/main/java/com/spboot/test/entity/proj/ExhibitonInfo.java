@@ -2,10 +2,13 @@ package com.spboot.test.entity.proj;
 
 
 
+import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,6 +22,7 @@ import lombok.Data;
 public class ExhibitonInfo {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ei_num")
 	private Integer eiNum;
 	
@@ -41,10 +45,10 @@ public class ExhibitonInfo {
 	private Date eiEndDate;
 	
 	@Column(name = "ei_start_time")
-	private Date eiStartTime;
+	private Time eiStartTime;
 	
 	@Column(name = "ei_end_time")
-	private Date eiEndTime;
+	private Time eiEndTime;
 	
 	@Column(name = "ei_status")
 	private String eiStatus;
